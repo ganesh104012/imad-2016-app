@@ -74,10 +74,10 @@ app.get('/:article',function(req,res){
    //res.send('Ganesh is my name!');
    res.send(createTemplate(articles[article]));
 });
-app.get('/name',function(req,res){
+/*app.get('/name',function(req,res){
    //res.send('Ganesh is my name!');
    res.sendFile(path.join(__dirname,'ui','name.html'));
-});
+});*/
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
