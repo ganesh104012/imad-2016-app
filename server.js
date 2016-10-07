@@ -35,13 +35,13 @@ var articles={
                 </p>`
     }
 };
-var template=function(data)
+var createTemplate=function(data)
 {
     var title= data.title;
     var heading=data.heading;
     var date=data.date;
     var content=data.content;
-var struct=`<!DOCTYPE html>
+var template=`<!DOCTYPE html>
 <html>
     <head>
         <title>
@@ -65,14 +65,14 @@ var struct=`<!DOCTYPE html>
         </div>
     </body>
 </html>`;
-return struct;
+return template;
 }
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/:article',function(req,res){
    //res.send('Ganesh is my name!');
-   res.send(path.join(__dirname,'ui','name.html'));
+   res.send(createTemplate(article));
 });
 app.get('/name',function(req,res){
    //res.send('Ganesh is my name!');
