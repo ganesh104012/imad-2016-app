@@ -10,8 +10,30 @@ var articles={
         title:'Article 1',
         heading:'The First Article',
         date:'20-Mar-2016',
-        content:''
+        content:`<p>
+                    The content of Article1 is little short from other Contents.
+                </p>`
     },
+    article2:{
+        title:'Article 2',
+        heading:'The Second Article',
+        date:'02-Jun-2016',
+        content:`<p>
+                    The content of Article2 is Longer than article 1.The content of Article2 is Longer than article 1.The content of Article2 is Longer than article 1.
+                </p>`
+    },
+    article3:{
+        title:'Article 3',
+        heading:'The Last Article',
+        date:'15-Aug-2016',
+        content:`<p>
+                    The Article3 Contains more paragraphs. Paragragh 1.
+                </p><p>
+                    The Article3 Contains more paragraphs. Paragragh 2.
+                </p><p>
+                    The Article3 Contains more paragraphs. Paragragh 3.
+                </p>`
+    }
 };
 var template=function(data)
 {
@@ -41,6 +63,10 @@ return struct;
 }
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+app.get('/:article',function(req,res){
+   //res.send('Ganesh is my name!');
+   res.send(path.join(__dirname,'ui','name.html'));
 });
 app.get('/name',function(req,res){
    //res.send('Ganesh is my name!');
