@@ -70,7 +70,7 @@ return template;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/:article',function(req,res){
+app.get('/:article-id',function(req,res){
    //res.send('Ganesh is my name!');
    res.send(createTemplate(articles[article]));
 });
