@@ -5,6 +5,40 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articles={
+    article1:{
+        title:'Article 1',
+        heading:'The First Article',
+        date:'20-Mar-2016',
+        content:''
+    },
+};
+var template=function(data)
+{
+    var title= data.title;
+    var heading=data.heading;
+    var date=data.date;
+    var content=data.content;
+var struct=`<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ${title}
+        </title>
+        <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>
+            Ganeshkumar is my name.
+        </h1>
+        <h5>10-Mar-2016</h5>
+        <p>
+            The content of Article1 is little short from other Contents.
+        </p>
+    </body>
+</html>`;
+return struct;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
