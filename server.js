@@ -53,16 +53,14 @@ var struct=`<!DOCTYPE html>
         <div class="container">
             <div clas="title_area">
                 <h1>
-                    Ganeshkumar is my name.
+                    ${heading}
                 </h1>
             </div>
             <div clas="date_area">
-                <h5>10-Mar-2016</h5>
+                <h5>${date}</h5>
             </div>
             <div clas="content_area">
-                <p>
-                    The content of Article1 is little short from other Contents.
-                </p>
+                ${content}
             </div>
         </div>
     </body>
