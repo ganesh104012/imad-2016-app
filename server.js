@@ -50,13 +50,21 @@ var struct=`<!DOCTYPE html>
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
     <body>
-        <h1>
-            Ganeshkumar is my name.
-        </h1>
-        <h5>10-Mar-2016</h5>
-        <p>
-            The content of Article1 is little short from other Contents.
-        </p>
+        <div class="container">
+            <div clas="title_area">
+                <h1>
+                    Ganeshkumar is my name.
+                </h1>
+            </div>
+            <div clas="date_area">
+                <h5>10-Mar-2016</h5>
+            </div>
+            <div clas="content_area">
+                <p>
+                    The content of Article1 is little short from other Contents.
+                </p>
+            </div>
+        </div>
     </body>
 </html>`;
 return struct;
