@@ -72,7 +72,8 @@ app.get('/', function (req, res) {
 });
 app.get('/:article',function(req,res){
    //res.send('Ganesh is my name!');
-   res.send(createTemplate(articles[article]));
+   
+   res.send(createTemplate(articles[req.params.article]));
 });
 /*app.get('/name',function(req,res){
    //res.send('Ganesh is my name!');
